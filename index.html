@@ -6,15 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
 
 <style>
-
-
 input[type=email], input[type=password] {
     width: 50%;
     font-family: 'Nunito', sans-serif;
@@ -70,6 +67,7 @@ span.psw {
   font-size: 25px;
   font-family: 'Nunito', sans-serif;
   background-color: Transparent;
+	max-width: 100%
 }
 
 /* Change styles for span on extra small screens */
@@ -81,7 +79,7 @@ span.psw {
 }
 
 body {
-    background: url("typing-in-nature.jpg");
+    /*background: url("typing-in-nature.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -100,29 +98,41 @@ body {
 </head>
 
 <body class="cover">
-
-
   <div class="container" style="padding-top:5%">
-		  <center><span class="welcome_strip">Welcome to Pinnacle CPT / DEST Module</span></center><br><br>
+		  <center>
+							<span class="welcome_strip">Welcome to Pinnacle CPT / DEST Module</span>
+			</center><br><br>
       <div id="loginDiv">
-      <div class="row"> <center>
-                <input type="email" id="email" placeholder="Enter Username" name="email" spellcheck="false" required> </center> </div> <br>
+      				<div class="row">
+				 									<center>
+                									<input type="email" id="email"
+																	placeholder="Enter Username" name="email"
+																	spellcheck="false" required>
+													</center>
+							</div> <br>
 
-              <div class="row"> <center>
-                <input type="password" id="password" placeholder="Enter Password" name="password" required>  </center> </div>
+              <div class="row">
+													<center>
+						                				<input type="password" id="password"
+																						placeholder="Enter Password" name="password" required>
+													</center>
+							</div>
 
-              <div class="row"> <center>
-                <button type="button"  id="quickstart-sign-in">Login</button> </center> </div>  <br>
+              <div class="row">
+											<center>
+			              				<button type="button"  id="loginButton">Login</button>
+											</center>
+							</div>  <br>
       </div>
       <img id="loading" src="https://www.google.com/images/spin-32.gif" style="display:none; margin:0 auto"></div>
-      <div class="row"> <center>
-        <div id="loginError">
-      </div> </div>
-
+      <div class="row">
+							<center>
+        				<div id="loginError">
+      					</div>
+			</div>
   </div>
-
-
-  <script src="app.js"></script>
-
+	<script src="config.js"></script>
+	<script src="login.js"></script>
 </body>
+
 </html>

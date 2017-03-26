@@ -74,7 +74,7 @@ span.psw {
     padding-top: 16px;
 }
 
-#registration
+#registrationDiv
 {
   margin-top: 53px;
 }
@@ -84,6 +84,7 @@ span.psw {
 {
   color: red;
   font-size: 20px;
+	margin-top: 2%;
 }
 
 body {
@@ -169,6 +170,10 @@ input{
   height: 100%;
   vertical-align: middle;}
 
+#progressBar{
+		display: none;
+}
+
 
 #progress
 {
@@ -178,13 +183,6 @@ input{
 </style>
 
 
-<script>
-
-window.onload = function() {
-  checkLoginStatus();
-};
-
-</script>
 
 
 </head>
@@ -193,57 +191,48 @@ window.onload = function() {
 
   <div class="container" style="background-color:#00BFA5;font-family: 'Nunito', sans-serif;width:100%; margin:autoStart">
 	    <div class="row">
-						<span id="user_id" style="display:none"></span>
-	          <span id="user_email"></span>
+		        <span id="user_email"></span>
 	          <button type="button" id="quickstart-sign-in">Sign In</button> <br>
 	    </div>
 	</div>
 
+<center><img src="loading.gif" id="loading"></center>
 
-<div id="registration">
+<div id="registrationDiv">
 
     <div class="container">
 
-        <div class="row"> <center> <input type="text" name="user_name" id="user_name" placeholder="Enter your name" required> </center> </div> <br><br>
+        <div class="row"> <center> <input type="text" name="name" id="name" placeholder="Enter your name" required> </center> </div> <br><br>
 
-        <div class="row"> <center> <input type="text" name="contact_number" id="contact_number" placeholder="Enter Contact Number" required>  </center> </div> <br>  <br>
+        <div class="row"> <center> <input type="text" name="contactNumber" id="contactNumber" placeholder="Enter Contact Number" required>  </center> </div> <br>  <br>
 
-        <div class="row"> <center> <input type="text" name="roll_no" id="roll_no"  placeholder="Enter your Roll No" required>  </center> </div> <br>  <br>
+        <div class="row"> <center> <input type="text" name="rollNo" id="rollNo"  placeholder="Enter your Roll No" required>  </center> </div> <br>  <br>
 
         <div class="row"> <center> <input type="file" accept="image/jpg, image/jpeg, image/x-png" name="image" id="image"  placeholder="Upload your photo" required>  <label for="image">Upload your photo</label>  </center> </div>
 
-        <div class="row"> <center>  <button type="button"  id="submitDetails">Submit</button> </center> </div>  <br><br>
-
         <div class="row"> <center>  <div id="registrationError"></div> </div>
+
+        <div class="row"> <center>  <button type="button"  id="registerButton">Submit</button> </center> </div>  <br><br>
 
     </div>
 
 </div>
 
 
-
-
 <div class="container">
-  <div class="row">
-    <center>
-      <div class="progress" id="progress">
-          <div class="progress-bar progress-bar-striped active" id="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-          </div>
-      </div>
-    </center>
+
+    <div class="progress-bar progress-bar-striped active" id="progressBar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      70%
+    </div>
   </div>
-</div>
+
+
+  <script src="config.js"></script>
+	<script src="register.js"></script>
 
 
 
-
-
-  <script src="app.js"></script>
-
-
-
-
-<script>
+<!--<script>
 
 document.getElementById('progress').style.display="none";
 
@@ -259,7 +248,7 @@ var user_email=document.getElementById("user_email").innerText;
 
 
 
-  </script>
+  </script> -->
 
 
 
